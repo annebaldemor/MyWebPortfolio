@@ -17,10 +17,10 @@
 
 }
 
-html{
+/* html{
     font-size: 62.5%;
     overflow: hidden;
-}
+} */
 
 body{
     background: var(--bg-color);
@@ -190,7 +190,7 @@ section{
     background-color: var(--bg-color);
     position: absolute;
     width: calc(100% + 8px);
-    height: 100%;
+    height: 120%;
     border-left: 2px solid #f1f1f1;
     right: -8px;
     animation: cursor 0.5s infinite, typing 8s steps(14) infinite;
@@ -290,108 +290,345 @@ section{
     right: -8px;
     animation: cursor 0.5s infinite, typing 8s steps(14) infinite;
 }
-/* Section styling */
-.timeline-section {
-    min-height: 100vh; /* Ensures the section takes at least the full viewport height */
-    padding: 100px 15px; /* Adds padding around the section */
-    background: var(--bg-color); /* Background color for the section */
+.timeline-section{
+    min-height: 100vh;
+    padding: 100px 15px;
+    background: var(--bg-color);
 }
-
-/* Timeline container styling */
-.timeline-items {
-    max-width: 1000px; /* Sets a maximum width for the container */
-    margin: auto; /* Centers the container horizontally */
-    display: flex; /* Uses flexbox for layout */
-    flex-direction: column; /* Arranges items in a vertical column */
-    position: relative; /* Positions the pseudo-element correctly */
-    padding-left: 30px; /* Adds padding to the left to accommodate the vertical line */
-    padding-right: 30px; /* Adds padding to the right */
-    overflow-y: auto; /* Allows vertical scrolling if content exceeds the container height */
-    height: calc(100vh - 200px); /* Adjust height to fit within viewport minus padding */
+.timeline-section h2{
+    margin-bottom: 5rem;
 }
-
-/* Vertical line pseudo-element */
-.timeline-items::before {
+.timeline-items{
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.timeline-items::before{
     content: '';
     position: absolute;
-    width: 10px;
-    height: 165%;
-    background-color: var(--main-color); /* Vertical line color */
-    left: 50%; /* Centers the line horizontally */
-    transform: translateX(-50%); /* Adjusts for centering */
+    width: 5px;
+    height: 100%;
+    background-color: var(--main-color);
+    left: calc(50% - 1px);
 }
-
-/* Individual timeline item styling */
-.timeline-item {
-    margin-bottom: 40px; /* Adds space below each timeline item */
-    width: 100%; /* Makes each item take full width of its container */
-    position: relative; /* Positions children elements correctly */
+.timeline-item{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
 }
-
-/* Remove margin from the last timeline item */
-.timeline-item:last-child {
+.timeline-item:last-child{
     margin-bottom: 0;
 }
-
-/* Odd and even item styling */
-.timeline-item:nth-child(odd) {
-    padding-right: calc(50% + 30px); /* Adjusts right padding for odd items */
-    text-align: right; /* Aligns text to the right for odd items */
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
 }
-
-.timeline-item:nth-child(even) {
-    padding-left: calc(50% + 30px); /* Adjusts left padding for even items */
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
 }
-
-/* Dot styling */
-.timeline-dot {
+.timeline-dot{
     height: 21px;
     width: 21px;
-    background-color: var(--main-color); /* Dot color */
+    background-color: var(--main-color);
     position: absolute;
-    left: calc(50% - 10.5px); /* Centers the dot horizontally */
-    top: 10px; /* Positions the dot at the top */
-    border-radius: 50%; /* Makes the dot circular */
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
 }
-
-/* Date styling */
-.timeline-date {
+.timeline-date{
     font-size: 20px;
     font-weight: 800;
     color: white;
-    margin: 6px 0 15px; /* Adds margin around the date */
+    margin: 6px 0 15px;
 }
-
-/* Content styling */
-.timeline-content {
-    background-color: var(--main-color); /* Background color for the content */
-    backdrop-filter: blur(20px); /* Applies a blur effect to the background */
-    border: 1px solid rgba(224, 224, 224, 0.25); /* Border with slight transparency */
-    padding: 30px; /* Adds padding inside the content box */
-    border-radius: 1rem; /* Rounds the corners */
-    cursor: pointer; /* Changes the cursor to a pointer on hover */
-    transition: 0.3s ease; /* Smooth transition for hover effect */
+.timeline-content{
+    background-color: var(--main-color);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(224, 224, 224, 0.25);
+    padding: 30px;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
-
-/* Hover effect for content */
-.timeline-content:hover {
-    transform: scale(1.05); /* Slightly scales up the content on hover */
+.timeline-content:hover{
+    transform: scale(1.05);
 }
-
-/* Heading inside content styling */
-.timeline-content h3 {
+.timeline-content h3{
     font-size: 20px;
     color: white;
-    margin: 0 0 10px; /* Margin below the heading */
-    text-transform: capitalize; /* Capitalizes the first letter of each word */
+    margin: 0 0 10px;
+    text-transform: capitalize;
     font-weight: 500;
 }
-
-/* Paragraph inside content styling */
-.timeline-content p {
+.timeline-content p{
     color: white;
-    opacity: 0.8; /* Slightly transparent text */
+    opacity: 0.8;
     font-size: 16px;
     font-weight: 400;
-    line-height: 22px; /* Adds space between lines of text */
+    line-height: 22px;
+}
+.services h2{
+    margin-bottom: 8rem;
+}
+.service-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.service-container .services-box{
+    flex: 1 1 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 3rem 2rem 4rem;
+    height: 500px;
+    border-radius: 2rem;
+    text-align: center;
+    border: 0.2rem solid rgb(224, 224, 224);
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.service-container .services-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+    background-color: white;
+    color: black;
+}
+.services-box i{
+    font-size: 7rem;
+    margin-bottom: 2rem;
+    color: var(--main-color);
+}
+.services-box h3{
+    font-size: 2.6rem;
+}
+.services-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+    width: 50px;
+}
+.contact{
+    background-color: var(--second-bg-color);
+}
+.contact h2{
+    margin-bottom: 3rem;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--main-color);
+    background: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 2px solid var(--main-color);
+    margin: 1rem 0;
+    resize: none;
+}
+.contact form .btn{
+    margin-top: 2rem;
+}
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--main-color);
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+.footer .social a{
+    font-size: 25px;
+    color: white;
+    border: 2px solid white;
+    width: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+.footer .social a:hover{
+    transform: scale(1.2) translateY(-10px);
+    background-color: white;
+    color: var(--main-color);
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 10px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+.footer ul li a:hover{
+    border-bottom: 3px solid white;
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer .copyright{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+    .home-circle-1{
+        bottom: 5rem;
+        width: 35vw;
+        height: 35vw;
+    }
+    .home-circle-2{
+        top: 5rem;
+        width: 30vw;
+        height: 30vw;
+    }
+}
+@media(max-width:991px){
+    header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media(max-width: 895px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: white;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        border-top-left-radius: 2rem;
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        color: black;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .navbar a:hover{
+        color: black;
+    }
+    .honme{
+        flex-direction: column-reverse;
+        margin: 5rem 4rem;
+    }
+    .home-circle-1{
+        width: 45vw;
+        height: 45vw;
+        top: 50rem;
+    }
+    .home-circle-2{
+        width: 55vw;
+        height: 55vw;
+        top: 10rem;
+    }
+    .home-img{
+        display: grid;
+        border: none;
+        border-radius: 50%;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+        border: 25px solid var(--main-color);
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about-circle{
+        height: 50vw;
+        width: 50vw;
+    }
+    .about-content{
+        margin: 1rem 4rem;
+    }
+    .about-img{
+        border: noen;
+    }
+    .about img{
+        width: 70vw;
+        margin-top: 1rem;
+        border: none;
+        margin-bottom: 3rem;
+        border: 25px solid #ff2c5d;
+    }
+    .services h2{
+        margin-bottom: 3rem;
+    }
+    .timeline-items::before{
+        padding-right: 0;
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
+        padding-left: 37px;
+    }
+    .timeline-dot{
+        left: 0;
+    }
+
 }
