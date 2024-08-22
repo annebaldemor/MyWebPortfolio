@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 </head>
 <body>
     <header class="header">
         <a href="#home" class="logo">
             Anne <span> Baldemor</span>
         </a>
+
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#education">Education</a>
-            <a href="#services">Services</a>
+            <a href="#services">Skills</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -115,35 +117,35 @@
     
     <section class="services" id="services">
 
-        <h2 class="heading">Projects</h2>
+        <h2 class="heading">Skills</h2>
 
         <div class="service-container">
 
             <div class="services-box">
                 <i class="bx bx-code-block"></i>
-                <h3>Web Development</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Libero reiciendis distinctio sint incidunt asperiores eos odio neque iure temporibus et tempore, 
-                perspiciatis magnam expedita rem, vitae exercitationem saepe nihil id.</p>
-                <a href="#" class="btn">Read More</a>
+                <h3>Web & System Development</h3>
+                <p>Explore my work, from designing the BIIRDNEST system with elegant interfaces and solid databases to crafting the aQR-IT system with intuitive layouts and clear documentation. 
+                    I’ve also built the Confession Wall with Django and an e-commerce site using Java and Spring Boot, blending creativity with technical expertise. 
+                    Each project reflects my passion for making digital solutions both functional and engaging.</p>
+                <a href="https://annebaldemor.my.canva.site/software-and-system-development" class="btn">See More</a>
             </div>
 
             <div class="services-box">
-                <i class="bx bxs-palette"></i>
-                <h3>Web Development</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Libero reiciendis distinctio sint incidunt asperiores eos odio neque iure temporibus et tempore, 
-                perspiciatis magnam expedita rem, vitae exercitationem saepe nihil id.</p>
-                <a href="#" class="btn">Read More</a>
+                <i class='bx bx-network-chart'></i>
+                <h3>Networking</h3>
+                <p>Explore my expertise in networking, where I excel in configuring networks and devices to ensure optimal performance and reliability. 
+                    I specialize in designing and implementing network solutions, troubleshooting connectivity issues, and enhancing security. 
+                    My work reflects a deep understanding of network configurations and a commitment to maintaining seamless and secure connections.</p>
+                <a href="https://annebaldemor.my.canva.site/networking" class="btn">See More</a>
             </div>
 
             <div class="services-box">
                 <i class="bx bxs-devices"></i>
-                <h3>Web Development</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Libero reiciendis distinctio sint incidunt asperiores eos odio neque iure temporibus et tempore, 
-                perspiciatis magnam expedita rem, vitae exercitationem saepe nihil id.</p>
-                <a href="#" class="btn">Read More</a>
+                <h3>Certifications</h3>
+                <p>Browse my collection of professional certifications, showcasing my expertise across various fields. 
+                    Each certification represents a commitment to excellence and continuous learning, reflecting my dedication to staying current with industry standards and best practices. 
+                    These credentials validate my skills and enhance my ability to deliver high-quality solutions in my area of specialization.</p>
+                <a href="https://annebaldemor.my.canva.site/certifications" class="btn">See More</a>
             </div>
         </div>
     </section>    
@@ -153,7 +155,7 @@
 
             <form action="#">
 
-                <div class="input-box">
+                <!-- <div class="input-box">
                     <input type="text" placeholder="Full Name">
                      <input type="email" placeholder="Email">
                 </div>
@@ -164,8 +166,9 @@
                 </div>
 
                     <textarea name="" id="" cols="30" rows="10" placeholder="Your Message">
-                    </textarea>
-                    <input type="submit" value="Send Message" class="btn">
+                    </textarea> -->
+                    <button type="button" onclick="window.location.href='mailto:baldemorannecharlene@gmail.com?subject=Subject%20Here&body=Hello%2C%0A%0AThis%20is%20a%20message.%0A%0AThank%20you!'" class="btn">Send Email</button>
+
             </form>
     </section>
 
@@ -185,7 +188,7 @@
                 <a href="#">About Me</a>
             </li>
             <li>
-                <a href="#">Services</a>
+                <a href="#">Skills</a>
             </li>
             <li>
                 <a href="#">Contact</a>
